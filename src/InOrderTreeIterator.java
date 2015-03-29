@@ -1,3 +1,7 @@
+/*
+ * Square Interview Coding Questions
+ * implement an inorder tree iterator in java
+ */
 public class InOrderTreeIterator {
 	public static void main(String[] args) {
 		Node n1 = new Node(1);
