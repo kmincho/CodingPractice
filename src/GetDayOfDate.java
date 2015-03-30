@@ -1,6 +1,8 @@
 /*
+ * Square Interview Coding Questions:
  * How to code a program that gives you the day of the week given a date
  */
+
 public class GetDayOfDate {
     static final int[] dayofMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     static final String[] dayName = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};

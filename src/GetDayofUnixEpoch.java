@@ -1,3 +1,8 @@
+/*
+ * Square Interview Coding Questions:
+ * What day of the week was the Unix Epoch?
+ */
+
 import java.util.Calendar;
 
 public class GetDayofUnixEpoch {
