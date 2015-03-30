@@ -1,5 +1,5 @@
 /*
- * Square Interview Coding Questions
+ * Square Interview Coding Questions:
  * Reverse bits in an integer
  */
 
