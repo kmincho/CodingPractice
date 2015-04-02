@@ -29,7 +29,14 @@ public class TicTacToe {
 			System.out.println("x = " + pos[0] + ", y = " + pos[1]);
 			turn = !turn;
 			printBoard();
-			checkWinner(pos);
+			if ((winner = checkWinner(pos)) != 0) {
+			    if (winner == 1) {
+			        System.out.println("WINNER : A");
+			    } else {
+			        System.out.println("WINNER : B");
+			    }
+			    break;
+			}
 		}
 		if (winner == 0) {
 			System.out.println("Tie");
@@ -37,18 +44,50 @@ public class TicTacToe {
 			System.out.println(winner == 1 ? "A" : "B");
 		}
 	}
-	
-	public static int checkWinner(int[] pos) {
-		//TO-DO: I need to implement this function
-		return 0;
-	}
-	
+
+    public static int checkWinner(int[] pos) {
+        // TO-DO: I need to implement this function
+        boolean checkResult = true;
+        if (pos[0] == 0 || pos[0] == 2) {
+            checkResult = true;
+            int k = pos[0];
+            int j;
+            for (j = 0; j < 2; j++) {
+                System.out.println("b1 = " + board[j][k] + ", b2 = " + board[j+1][k]);
+                if (board[j][k] != board[j + 1][k]) {
+                    checkResult = false;
+                    break;
+                }
+            }
+            if (checkResult) {
+                System.out.println("11111 - " + j);
+                return board[pos[0]][pos[1]];
+            }
+        }
+        if (pos[1] == 0 || pos[1] == 2) {
+            checkResult = true;
+            int k = pos[1];
+            for (int j = 0; j < 2; j++) {
+                if (board[k][j] != board[k][j + 1]) {
+                    checkResult = false;
+                    break;
+                }
+            }
+            if (checkResult) {
+                System.out.println("22222");
+                return board[pos[0]][pos[1]];
+            }
+        }
+
+        return 0;
+    }
+
 	public static void printBoard() {
 		for (int i = 0; i < 3; i++) {
-			String str = 
+			String str =
 					String.format("%2d %2d %2d", board[i][0], board[i][1], board[i][2]);
 			System.out.println(str);
 		}
-		
+
 	}
 }
