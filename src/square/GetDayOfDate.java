@@ -1,3 +1,4 @@
+package square;
 /*
  * Square Interview Coding Questions:
  * How to code a program that gives you the day of the week given a date

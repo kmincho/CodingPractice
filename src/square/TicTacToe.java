@@ -1,3 +1,4 @@
+package square;
 /*
  * Square Interview Coding Questions:
  * Implement Tic-Tac-Toe

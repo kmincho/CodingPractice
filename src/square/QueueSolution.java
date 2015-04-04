@@ -1,3 +1,4 @@
+package square;
 /*
  * Square Interview Coding Questions:
  * Implement a queue from scratch (cannot use a built in one)

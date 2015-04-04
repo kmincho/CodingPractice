@@ -1,3 +1,4 @@
+package square;
 /*
  * Square Interview Coding Questions:
  * Find the number of days between two dates
