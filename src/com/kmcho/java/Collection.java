@@ -2,13 +2,17 @@ package com.kmcho.java;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.Vector;
 
 public class Collection {
     public static void main(String[] args) {
         ArrayListPractice();
+        System.out.println();
+
+        VectorPractice();
     }
     
-    public static void ArrayListPractice() {
+    static void ArrayListPractice() {
         ArrayList<Integer> al = new ArrayList<Integer>();
         al.add(1);
         al.add(3);
@@ -25,5 +29,16 @@ public class Collection {
         for (Integer n : al) {
             System.out.println(n);
         }
+    }
+
+    static void VectorPractice() {
+        Vector v = new Vector();
+
+        v.add(1);
+        v.add(2);
+        v.add("Tiger");
+
+        System.out.println(v.get(2));
+        System.out.println(v.capacity());
     }
 }
