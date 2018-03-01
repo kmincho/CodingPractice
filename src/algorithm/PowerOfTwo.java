@@ -5,6 +5,7 @@ import java.util.Scanner;
 /**
  * https://www.geeksforgeeks.org/program-to-find-whether-a-no-is-power-of-two/
  */
+
 public class PowerOfTwo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

@@ -1,8 +1,11 @@
 package algorithm;
 
-import java.util.Arrays;
 import java.util.Scanner;
 import java.util.stream.IntStream;
+
+/**
+ * https://www.geeksforgeeks.org/dynamic-programming-set-9-binomial-coefficient/
+ */
 
 public class Binomial {
     public static void main(String args[]) {

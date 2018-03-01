@@ -1,5 +1,14 @@
 package algorithm;
 
+/**
+ * https://www.geeksforgeeks.org/print-all-possible-combinations-of-r-elements-in-a-given-array-of-size-n/
+ *
+ * Given an array of size n,
+ * generate and print all possible combinations of r elements in array.
+ * For example, if input array is {1, 2, 3, 4} and r is 2,
+ * then output should be {1, 2}, {1, 3}, {1, 4}, {2, 3}, {2, 4} and {3, 4}.
+ */
+
 public class kPermutation {
     public static void main(String[] args) {
         String[] input = {"a", "b", "c", "d", "e", "f", "g"};

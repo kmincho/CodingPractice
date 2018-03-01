@@ -5,6 +5,10 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
+/**
+ * https://www.hackerrank.com/challenges/lonely-integer/problem
+ */
+
 public class LonelyInteger {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

@@ -3,6 +3,10 @@ package algorithm;
 import java.math.BigInteger;
 import java.util.Scanner;
 
+/**
+ * https://www.geeksforgeeks.org/factorial-large-number/
+ */
+
 public class BigFactorial {
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
