@@ -1,4 +1,4 @@
-package square;
+package com.kmcho.square;
 /*
  * Square Interview Coding Questions:
  * What day of the week was the Unix Epoch?

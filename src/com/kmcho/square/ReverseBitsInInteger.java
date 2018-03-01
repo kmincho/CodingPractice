@@ -1,4 +1,4 @@
-package square;
+package com.kmcho.square;
 /*
  * Square Interview Coding Questions:
  * Reverse bits in an integer

@@ -1,4 +1,4 @@
-package algorithm;
+package com.kmcho.algorithm;
 
 import java.math.BigInteger;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package square;
+package com.kmcho.square;
 /*
  * Square Interview Coding Questions:
  * LRU cache problem that supports get and set operations

@@ -1,4 +1,4 @@
-package java;
+package com.kmcho.java;
 
 import java.util.ArrayList;
 import java.util.Iterator;

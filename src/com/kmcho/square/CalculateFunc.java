@@ -1,4 +1,4 @@
-package square;
+package com.kmcho.square;
 /*
  * Square Interview Coding Questions:
  * Write the calculate function
