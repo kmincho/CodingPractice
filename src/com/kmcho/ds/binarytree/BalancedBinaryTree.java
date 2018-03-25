@@ -1,4 +1,4 @@
-package com.kmcho.ds;
+package com.kmcho.ds.binarytree;
 
 public class BalancedBinaryTree {
     public static void main(String[] args) {
@@ -43,7 +43,7 @@ public class BalancedBinaryTree {
         return heightLeft > heightRight ? heightLeft + 1 : heightRight + 1;
     }
 
-    static class TreeNode {
+    private static class TreeNode {
         int value;
         TreeNode left;
         TreeNode right;
