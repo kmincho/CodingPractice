@@ -3,39 +3,39 @@ package com.kmcho.ds.binarytree;
 public class LCA {
     public static void main(String[] args) {
         Node[] nodes = new Node[15];
-        Node root = createTree(nodes);
 
-        LCA(root, nodes[11], nodes[6]);
+        Node root = createTree(nodes);
+        Node a =  nodes[13];
+        Node b = nodes[7];
+
+        Node node = findLCA(root, a, b);
+
+        System.out.println("LCA(" + a.value + ", " + b.value + ") = " + node.value);
     }
 
-    public static void LCA(Node node, Node a, Node b) {
-        if (node.left != null) LCA(node.left, a, b);
-        if (node.right != null) LCA(node.right, a, b);
+    public static Node findLCA(Node node, Node a, Node b) {
+        if (node == null) {
+            return null;
+        }
 
         if (node.value == a.value || node.value == b.value) {
-            node.found++;
+            return node;
         }
 
-        if (node.left != null && node.left.found > 1
-                || node.right != null && node.right.found > 1) return;
+        Node leftLCA = findLCA(node.left, a, b);
+        Node rightLCA = findLCA(node.right, a, b);
 
-        if (node.left != null) node.found += node.left.found;
-        if (node.right != null) node.found += node.right.found;
-
-        if (node.found > 1) {
-            System.out.println("LCA(" + a.value + ", " + b.value + ") = " + node.value);
-            return;
+        if (leftLCA != null && rightLCA != null) {
+            return node;
         }
 
-        return;
+        return leftLCA != null ? leftLCA : rightLCA;
     }
 
     static class Node {
         int value;
         Node left;
         Node right;
-
-        int found = 0;
 
         public Node(int value) {
             this.value = value;
