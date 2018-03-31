@@ -1,4 +1,4 @@
-package com.kmcho.ds.binarytree;
+package com.kmcho.ds.tree;
 
 public class BalancedBinaryTree {
     public static void main(String[] args) {
