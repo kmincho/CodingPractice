@@ -1,4 +1,4 @@
-package com.kmcho.ds;
+package com.kmcho.ds.stack;
 
 import java.util.ArrayList;
 import java.util.Iterator;

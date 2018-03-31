@@ -1,4 +1,4 @@
-package com.kmcho.ds;
+package com.kmcho.ds.list;
 
 import java.util.stream.IntStream;
 
