@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
  * https://www.geeksforgeeks.org/linked-list-set-1-introduction/
  */
 
-public class LinkedList<T> {
+class LinkedList<T> {
     private Node head;
     private Node tail;
 

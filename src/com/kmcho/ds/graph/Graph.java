@@ -3,7 +3,7 @@ package com.kmcho.ds.graph;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Graph {
+class Graph {
     int size;
     int[][] matrix;
 
