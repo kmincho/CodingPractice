@@ -22,7 +22,7 @@ class Topological {
                 v = sc.nextInt();
                 graph[u].add(v);
             }
-            GfG g = new GfG();
+            GfG2 g = new GfG2();
             int res[] = g.topoSort(graph, N);
             boolean valid = true;
             for (int i = 0; i < N; i++) {
