@@ -1,20 +1,23 @@
-package com.kmcho.com.gfg.graph;
-
+package com.kmcho.com.gfg.graph.cycle;
 
 import java.util.Iterator;
 import java.util.LinkedList;
 
+/**
+ * https://practice.geeksforgeeks.org/problems/detect-cycle-in-a-directed-graph/1
+ */
+
 class GfG {
     public boolean hasCycle(int v, LinkedList<Integer>[] alist, boolean[] visited, boolean[] explored) {
         for (int i = 0; i < v; i++) {
-            if (DFS(i, alist, visited, explored)) {
+            if (findCycle(i, alist, visited, explored)) {
                 return true;
             }
         }
         return false;
     }
 
-    public boolean DFS(int v, LinkedList<Integer>[] alist, boolean[] visited, boolean[] explored) {
+    public boolean findCycle(int v, LinkedList<Integer>[] alist, boolean[] visited, boolean[] explored) {
         if (visited[v]) {
             return false;
         }
@@ -29,7 +32,7 @@ class GfG {
             if (explored[next]) {
                 return true;
             } else {
-                if (DFS(next, alist, visited, explored)) {
+                if (findCycle(next, alist, visited, explored)) {
                     return true;
                 }
             }

@@ -1,4 +1,4 @@
-package com.kmcho.com.gfg.graph;
+package com.kmcho.com.gfg.graph.cycle;
 
 import java.util.LinkedList;
 import java.util.Scanner;
