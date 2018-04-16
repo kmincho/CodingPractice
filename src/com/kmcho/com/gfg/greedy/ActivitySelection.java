@@ -8,7 +8,7 @@ import java.util.*;
  */
 
 public class ActivitySelection {
-    static class Task {
+    private static class Task {
         int start;
         int end;
     }
