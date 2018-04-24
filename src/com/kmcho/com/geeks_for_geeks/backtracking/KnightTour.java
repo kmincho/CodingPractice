@@ -1,4 +1,4 @@
-package com.kmcho.com.geeks_for_geeks.backtracking.knight_tour;
+package com.kmcho.com.geeks_for_geeks.backtracking;
 
 /**
  * The Knight’s tour problem
