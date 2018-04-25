@@ -19,15 +19,15 @@ public class LCA2 {
         Node n9 = new Node(9);
         Node n10 = new Node(10);
 
-        n1.setChildren(n2, n3);
-        n2.setChildren(n4, n5);
-        n3.setChildren(n6, n7);
-        n4.setChildren(n8, null);
-        n6.setChildren(n9, null);
-        n9.setChildren(n10, null);
+        n1.parentOf(n2, n3);
+        n2.parentOf(n4, n5);
+        n3.parentOf(n6, n7);
+        n4.parentOf(n8, null);
+        n6.parentOf(n9, null);
+        n9.parentOf(n10, null);
 
         System.out.println("is covered? = " + cover(n2, n8));
-        System.out.println("first common = " + firstCommon(n1, n7, n10).id);
+        System.out.println("first common = " + firstCommon(n1, n7, n10).value);
     }
 
     public static Node firstCommon(Node root, Node n1, Node n2) {
@@ -43,24 +43,9 @@ public class LCA2 {
         if (root == null) {
             return false;
         }
-        if (root.id == n1.id) {
+        if (root.value == n1.value) {
             return true;
         }
         return cover(root.left, n1) || cover(root.right, n1);
-    }
-
-    private static class Node {
-        int id;
-        Node left = null;
-        Node right = null;
-
-        public Node(int i) {
-            id = i;
-        }
-
-        public void setChildren(Node l, Node r) {
-            left = l;
-            right = r;
-        }
     }
 }

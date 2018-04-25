@@ -32,21 +32,6 @@ public class LCA {
         return leftLCA != null ? leftLCA : rightLCA;
     }
 
-    static class Node {
-        int value;
-        Node left;
-        Node right;
-
-        public Node(int value) {
-            this.value = value;
-        }
-
-        public void parentOf(Node left, Node right) {
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     private static Node createTree(Node[] nodes) {
         for (int i = 0; i < 15; i++) {
             nodes[i] = new Node(i);

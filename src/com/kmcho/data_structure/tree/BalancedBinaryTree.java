@@ -1,14 +1,19 @@
 package com.kmcho.data_structure.tree;
 
+/**
+ * How to determine if a binary tree is height-balanced?
+ * https://www.geeksforgeeks.org/how-to-determine-if-a-binary-tree-is-balanced/
+ */
+
 public class BalancedBinaryTree {
     public static void main(String[] args) {
 
-        TreeNode root = createTree();
+        Node root = createTree();
 
         System.out.println("balanced tree? " + isBalanced(root));
     }
 
-    public static boolean isBalanced(TreeNode node)  {
+    public static boolean isBalanced(Node node)  {
         if (node == null) {
             return true;
         }
@@ -29,7 +34,7 @@ public class BalancedBinaryTree {
         return true;
     }
 
-    public static int getHeight(TreeNode node) {
+    public static int getHeight(Node node) {
         if (node == null) {
             return -1;
         }
@@ -43,43 +48,28 @@ public class BalancedBinaryTree {
         return heightLeft > heightRight ? heightLeft + 1 : heightRight + 1;
     }
 
-    private static class TreeNode {
-        int value;
-        TreeNode left;
-        TreeNode right;
-
-        public TreeNode(int value) {
-            this.value = value;
-        }
-
-        public void set(TreeNode left, TreeNode right) {
-            this.left = left;
-            this.right = right;
-        }
-    }
-
-    private static TreeNode createTree() {
-        TreeNode[] nodes = new TreeNode[15];
+    private static Node createTree() {
+        Node[] nodes = new Node[15];
 
         for (int i = 0; i < 15; i++) {
-            nodes[i] = new TreeNode(i);
+            nodes[i] = new Node(i);
         }
 
-        nodes[0].set(nodes[1], nodes[2]);
-        nodes[1].set(nodes[3], nodes[4]);
-        nodes[2].set(nodes[5], nodes[6]);
-        nodes[3].set(nodes[7], nodes[8]);
-        nodes[4].set(nodes[9], nodes[10]);
-        nodes[5].set(nodes[11], nodes[12]);
-        nodes[6].set(null, null);
-        nodes[7].set(nodes[13], nodes[14]);
-        nodes[8].set(null, null);
-        nodes[9].set(null, null);
-        nodes[10].set(null, null);
-        nodes[11].set(null, null);
-        nodes[12].set(null, null);
-        nodes[13].set(null, null);
-        nodes[14].set(null, null);
+        nodes[0].parentOf(nodes[1], nodes[2]);
+        nodes[1].parentOf(nodes[3], nodes[4]);
+        nodes[2].parentOf(nodes[5], nodes[6]);
+        nodes[3].parentOf(nodes[7], nodes[8]);
+        nodes[4].parentOf(nodes[9], nodes[10]);
+        nodes[5].parentOf(nodes[11], nodes[12]);
+        nodes[6].parentOf(null, null);
+        nodes[7].parentOf(nodes[13], nodes[14]);
+        nodes[8].parentOf(null, null);
+        nodes[9].parentOf(null, null);
+        nodes[10].parentOf(null, null);
+        nodes[11].parentOf(null, null);
+        nodes[12].parentOf(null, null);
+        nodes[13].parentOf(null, null);
+        nodes[14].parentOf(null, null);
 
         return nodes[0];
     }

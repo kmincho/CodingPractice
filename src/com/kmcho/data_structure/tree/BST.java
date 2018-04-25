@@ -141,16 +141,6 @@ public class BST {
         postOrder(parent.right);
         System.out.println(parent.value);
     }
-
-    private static class Node {
-        private int value;
-        private Node left = null;
-        private Node right = null;
-
-        public Node(int d) {
-            value = d;
-        }
-    }
 }
 
 
