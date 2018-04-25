@@ -5,7 +5,7 @@ package com.kmcho.data_structure.tree;
  * https://www.geeksforgeeks.org/how-to-determine-if-a-binary-tree-is-balanced/
  */
 
-public class BalancedBinaryTree {
+public class BT {
     public static void main(String[] args) {
 
         Node root = createTree();
