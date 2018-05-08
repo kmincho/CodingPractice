@@ -5,6 +5,10 @@ import java.util.*;
 /**
  * Greedy Algorithm - Activity Selection Problem
  * https://practice.geeksforgeeks.org/problems/activity-selection/0
+ *
+ * Given N activities with their start and finish times.
+ * Select the maximum number of activities that can be performed by a single person,
+ * assuming that a person can only work on a single activity at a time.
  */
 
 public class ActivitySelection {
