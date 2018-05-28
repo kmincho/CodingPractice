@@ -6,22 +6,22 @@ public class Insertion {
     public static void main(String[] args) {
         int[] data = {11, 8, 25, 12, 22, 64, 13};
 
-        for (int i = 1; i < data.length; i++) {
-            int current = data[i];
+        sort(data);
+        System.out.println(Arrays.toString(data));
+    }
 
-            for (int j = i - 1; j >= 0; j--) {
-                if (data[j] < current) {
-                    data[j + 1] =  current;
-                    break;
-                } else {
-                    data[j + 1] =  data[j];
-                    if (j == 0) {
-                        data[0] = current;
-                    }
-                }
+    private static void sort(int[] data) {
+        for (int i = 1; i < data.length; i++) {
+            for (int j = i; j > 0; j--) {
+                if (data[j - 1] < data[j]) break;
+                swap(data, j, j - 1);
             }
         }
+    }
 
-        System.out.println(Arrays.toString(data));
+    private static void swap(int[] data, int i, int j) {
+        int temp = data[i];
+        data[i] = data[j];
+        data[j] = temp;
     }
 }
