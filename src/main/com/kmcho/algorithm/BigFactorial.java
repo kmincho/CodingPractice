@@ -12,12 +12,17 @@ public class BigFactorial {
         Scanner scanner = new Scanner(System.in);
         long value = scanner.nextLong();
 
+        System.out.println(factorial(BigInteger.valueOf(value)));
+    }
+
+    private static BigInteger factorial(BigInteger n) {
         BigInteger result = BigInteger.ONE;
 
-        for (long i = 1; i < value + 1; i++) {
-            result = result.multiply(BigInteger.valueOf(i));
+        while(!n.equals(BigInteger.ZERO)) {
+            result = result.multiply(n);
+            n = n.subtract(BigInteger.ONE);
         }
 
-        System.out.println(result);
+        return result;
     }
 }
