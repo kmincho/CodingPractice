@@ -2,8 +2,14 @@ package com.kmcho.algorithm.string;
 
 public class Palindrome {
     public static void main(String[] args) {
-        String str = "madam";
-        System.out.println(str + ", panlindrome? " + isPalindrome(str));
+        testPalindrome("madam");
+        testPalindrome("string");
+        testPalindrome("abcdcba");
+        testPalindrome("abba");
+    }
+
+    private static void testPalindrome(String in) {
+        System.out.println("(alg2, alg2) -> " + "(" + isPalindrome(in) + ", " + isPalindrome2(in) + ")");
     }
 
     private static boolean isPalindrome(String in) {
@@ -16,5 +22,15 @@ public class Palindrome {
         } else {
             return in;
         }
+    }
+
+    private static boolean isPalindrome2(String in) {
+        int l = 0;
+        int h = in.length() - 1;
+
+        while (l < h) {
+            if (in.charAt(l++) != in.charAt(h--)) return false;
+        }
+        return true;
     }
 }
