@@ -1,4 +1,4 @@
-package com.kmcho.java;
+package com.kmcho.java.collection;
 
 import java.util.*;
 
