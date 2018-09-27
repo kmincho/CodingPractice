@@ -1,10 +1,11 @@
-package com.kmcho.algorithm;
+package com.kmcho.algorithm.array;
 
 import java.util.Arrays;
 import java.util.stream.IntStream;
 
 /**
  * https://careercup.com/question?id=16759664
+ * https://www.geeksforgeeks.org/find-smallest-range-containing-elements-from-k-lists/
  *
  * You have k lists of sorted integers. Find the smallest range that includes at least one number from each of the k lists.
  *
@@ -15,7 +16,6 @@ import java.util.stream.IntStream;
  *
  * The smallest range here would be [20, 24] as it contains 24 from list 1, 20 from list 2, and 22 from list 3.
  */
-
 public class MinRange {
     public static void main(String[] args) {
         int[][] input = {

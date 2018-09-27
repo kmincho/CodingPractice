@@ -1,4 +1,4 @@
-package com.kmcho.algorithm;
+package com.kmcho.algorithm.math;
 
 import java.util.Scanner;
 

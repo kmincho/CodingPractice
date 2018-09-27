@@ -1,17 +1,28 @@
-package com.kmcho.algorithm;
+package com.kmcho.algorithm.graph;
 
 import java.util.*;
 
 /**
  * https://www.geeksforgeeks.org/word-ladder-length-of-shortest-chain-to-reach-a-target-word/
+ *
+ * Given a dictionary, and two words ‘start’ and ‘target’ (both of same length).
+ * Find length of the smallest chain from ‘start’ to ‘target’ if it exists,
+ * such that adjacent words in the chain only differ by one character
+ * and each word in the chain is a valid word i.e., it exists in the dictionary.
+ * It may be assumed that the ‘target’ word exists in dictionary and length of all dictionary words is same.
+ *
+ * Example:
+ * Input:  Dictionary = {POON, PLEE, SAME, POIE, PLEA, PLIE, POIN}
+ *              start = TOON
+ *              target = PLEA
+ * Output: 7
+ * Explanation: TOON - POON - POIN - POIE - PLIE - PLEE - PLEA
  */
 
 public class WordLadder {
     static String[] vocabulary = {"POON", "PLEE", "SAME", "POIE", "PLEA", "PLIE", "POIN"};
     
     public static void main(String[] args) {
-        
-
         Scanner scanner = new Scanner(System.in);
         String start = scanner.next();
         String end = scanner.next();
@@ -140,7 +151,6 @@ public class WordLadder {
             }
         }
 
-//        return result.toArray(new String[0]);
         return adjacentWords.stream().toArray(String[]::new);
     }
 

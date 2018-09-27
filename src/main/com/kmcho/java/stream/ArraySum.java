@@ -1,4 +1,4 @@
-package com.kmcho.algorithm;
+package com.kmcho.java.stream;
 
 import java.util.Scanner;
 import java.util.stream.IntStream;

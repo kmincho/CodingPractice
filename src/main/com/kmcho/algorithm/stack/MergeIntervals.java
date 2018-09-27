@@ -1,4 +1,4 @@
-package com.kmcho.algorithm;
+package com.kmcho.algorithm.stack;
 
 import java.util.*;
 
