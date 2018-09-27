@@ -1,4 +1,4 @@
-package com.kmcho.com.geeks_for_geeks.graph;
+package com.kmcho.com.geeks_for_geeks.graph.dfs;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -7,6 +7,19 @@ import java.util.Scanner;
 
 /**
  * https://practice.geeksforgeeks.org/problems/find-the-number-of-islands/1
+ *
+ * A group of connected 1s forms an island
+ * now your task is to complete the method findIslands which returns the no of islands present.
+ * The function takes three arguments the first is the boolean matrix A
+ * and then the next two arguments are N and M denoting the size of the matrix A.
+ *
+ * Input:
+ * The first line of input will be the no of test cases T then T test cases follow.
+ * The first line of each test case contains two space separated integers N and M.
+ * Then in the next line are the NxM inputs of the matrix A separated by space.
+ *
+ * Output:
+ * The output in the expected output will be the total no of islands present.
  *
  * + Test Case 1
  * Input
@@ -26,7 +39,6 @@ import java.util.Scanner;
  * Output
  * 3
  */
-
 class Island {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
